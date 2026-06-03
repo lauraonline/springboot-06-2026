@@ -2,6 +2,7 @@ package br.edu.ifpa.concorrencia_bancaria.dto;
 
 import java.math.BigDecimal;
 
+// data transfer object
 public class OperacaoDTO {
     private BigDecimal valor;
 

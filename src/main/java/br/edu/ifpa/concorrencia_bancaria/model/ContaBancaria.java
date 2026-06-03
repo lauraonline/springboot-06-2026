@@ -18,7 +18,6 @@ public class ContaBancaria {
     public ContaBancaria() {
     }
 
-    // constutor real
     public ContaBancaria(BigDecimal saldo) {
         this.saldo = saldo;
     }
