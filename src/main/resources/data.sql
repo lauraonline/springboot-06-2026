@@ -1,0 +1,1 @@
+INSERT INTO conta_bancaria (saldo) VALUES (1000.00);
