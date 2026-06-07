@@ -17,21 +17,13 @@ public class ContaBancariaVersionadaController {
 
     @PostMapping("/{id}/deposito")
     public ResponseEntity<String> depositar(@PathVariable Long id, @RequestBody OperacaoDTO dto) {
-        try {
-            service.depositar(id, dto.getValor());
-            return ResponseEntity.ok("Depósito realizado com sucesso.");
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+        service.depositar(id, dto.getValor());
+        return ResponseEntity.ok("Depósito realizado com sucesso.");
     }
 
     @PostMapping("/{id}/saque")
     public ResponseEntity<String> sacar(@PathVariable Long id, @RequestBody OperacaoDTO dto) {
-        try {
-            service.sacar(id, dto.getValor());
-            return ResponseEntity.ok("Saque realizado com sucesso.");
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+        service.sacar(id, dto.getValor());
+        return ResponseEntity.ok("Saque realizado com sucesso.");
     }
 }
